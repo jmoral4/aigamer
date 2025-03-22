@@ -85,4 +85,7 @@ The following keyboard controls are available while the AI is playing:
 
 ## Logging
 
-The application logs all AI actions and system events to a log file. The log file path is displayed when the application starts.
+The application logs all AI actions and system events to a log file. The log file path is displayed when the application starts. All images captured are also stored in the application directory and named for the model and date of capture.
+
+## Other
+There is a module for processing OCR via Tesseract instead of AI. It would require a slight change to flow but was left in the codebase. It is no longer used since it was generating poor results for larger screens full of options. I also realized that having vision models process the images would allow for more than just CLI based games in the future.

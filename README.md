@@ -79,13 +79,15 @@ The following keyboard controls are available while the AI is playing:
 
 ## Requirements
 
-- .NET Core 
+- Visual Studio 2022
+- .NET 8.0
 - Warsim game installed and runnable
-- API keys for cloud-based AI providers (if not using Ollama)
+- (optional) API keys for cloud-based AI providers (if not using Ollama)
+- Ollama and either a multi-modal model (Gemma3 > 14B) or both a language model (the brains) and a vision model (the eyes -- llama3.2-vision)
 
 ## Logging
 
-The application logs all AI actions and system events to a log file. The log file path is displayed when the application starts. All images captured are also stored in the application directory and named for the model and date of capture.
+The application logs all AI actions and system events /logs/ in your running directory. The log file path is displayed when the application starts. All images captured are also stored in the application directory and named for the model and date of capture.
 
 ## Other
 There is a module for processing OCR via Tesseract instead of AI. It would require a slight change to flow but was left in the codebase. It is no longer used since it was generating poor results for larger screens full of options. I also realized that having vision models process the images would allow for more than just CLI based games in the future.

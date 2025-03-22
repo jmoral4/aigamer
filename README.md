@@ -90,4 +90,10 @@ The following keyboard controls are available while the AI is playing:
 The application logs all AI actions and system events /logs/ in your running directory. The log file path is displayed when the application starts. All images captured are also stored in the application directory and named for the model and date of capture.
 
 ## Other
+### Tesseract OCR
 There is a module for processing OCR via Tesseract instead of AI. It would require a slight change to flow but was left in the codebase. It is no longer used since it was generating poor results for larger screens full of options. I also realized that having vision models process the images would allow for more than just CLI based games in the future.
+
+### Ollama optimization
+In order to compete with Claude, the Ollama code path makes a few optimizations. First, conversation history is retained. Second, game state and ai choices are summarized over time and stored. Lastly, system prompt is reloaded to ensure the models "understand the point" even after playing for a long while. 
+
+Feel free to play around! 
